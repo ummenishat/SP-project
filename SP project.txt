@@ -117,6 +117,13 @@ public class MainActivity extends AppCompatActivity {
         result.setText("");
         c = '/';
     }
+public void numModul(View view) {
+
+        String s = result.getText().toString();
+        num1 = Double.parseDouble(s);
+        result.setText("");
+        c = '%';
+    }
 
     public void numEqual(View view) {
 
@@ -146,6 +153,13 @@ public class MainActivity extends AppCompatActivity {
         if(c == '/'){
 
             ans = num1 / num2;
+            s = String.valueOf(ans);
+            result.setText(s);
+            c = '0';
+        }
+        if(c == '%'){
+
+            ans = num1 % num2;
             s = String.valueOf(ans);
             result.setText(s);
             c = '0';
